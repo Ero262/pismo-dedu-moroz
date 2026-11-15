@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Marck+Script&display=swap');
+:root{--navy:#102b4e;--gold:#f7d98b;--cream:#fffaf0;--red:#c94d54}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--navy);color:#fff;font-family:Comfortaa,system-ui,sans-serif;overflow-x:hidden}
+.snow{position:absolute;top:90px;left:0;width:100%;color:#dcecff;opacity:.42;letter-spacing:16px;pointer-events:none;white-space:nowrap;overflow:hidden}
+.top{height:76px;max-width:1120px;margin:auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:var(--gold);font-size:17px}.top-note{font-size:11px;color:#c4d5e8;letter-spacing:1px}
+main{max-width:1120px;margin:auto;padding:30px 24px 70px}
+.hero{min-height:430px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px}
+.hero-copy{padding:35px 0}.eyebrow{font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:700}
+h1{font-size:clamp(38px,6vw,66px);line-height:1.12;margin:18px 0;color:#fff}
+h1 em{font-family:"Marck Script",cursive;color:var(--gold);font-size:1.2em;font-weight:400}
+.intro{color:#d4e1ef;line-height:1.8;max-width:460px;font-size:15px}
+.scroll-link{display:inline-block;margin-top:18px;padding:15px 23px;background:var(--gold);color:#183452;text-decoration:none;border-radius:30px;font-weight:700;font-size:13px;box-shadow:0 8px 24px #071b3266}
+.santa-art{height:360px;position:relative;border:1px solid #ffffff20;border-radius:48% 48% 24px 24px;background:radial-gradient(circle at 50% 25%,#31577e,#173656 65%,#102b4e);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.moon{position:absolute;right:18%;top:13%;width:55px;height:55px;border-radius:50%;background:#ffe7ae;box-shadow:0 0 35px #ffe7ae88}
+.santa{font-size:150px;z-index:2;filter:drop-shadow(0 12px 10px #071b3266);transform:translateY(18px)}
+.snowman{position:absolute;right:12%;bottom:48px;font-size:52px}.tree{position:absolute;bottom:30px;font-size:65px}.t1{left:8%}.t2{right:5%;font-size:48px}
+.gift{position:absolute;bottom:28px;font-size:32px;z-index:3}.g1{left:29%}.g2{right:29%}
+.star{position:absolute;color:var(--gold);font-size:24px}.s1{top:20%;left:20%}.s2{top:35%;right:20%}.s3{top:12%;left:48%}
+.ground{position:absolute;bottom:0;height:35px;background:#d9e9f4;width:100%;border-radius:50% 50% 0 0}
+.letter-section{padding-top:35px;scroll-margin-top:20px}
+.section-heading{text-align:center;margin-bottom:28px}.mini-star{color:var(--gold);font-size:24px}
+h2{font-size:30px;margin:8px 0;color:var(--gold)}.section-heading p{color:#cbd9e8;font-size:13px}
+.letter-card{position:relative;max-width:650px;margin:auto;background:var(--cream);color:#233b53;padding:42px clamp(22px,6vw,58px) 38px;border-radius:12px;box-shadow:0 22px 55px #06182c77;border:7px double #e9d39d}
+.card-ribbon{text-align:center;color:#b68d46;font-size:11px;letter-spacing:3px;font-weight:700;margin-bottom:30px}
+.letter-card>label{display:block;font-size:12px;font-weight:700;margin:18px 0 8px}
+input:not([type=checkbox]),select,textarea{width:100%;border:1px solid #d8d5ca;border-radius:9px;padding:14px 15px;background:#fff;font:13px Comfortaa,sans-serif;color:#233b53;outline:none}
+input:focus,select:focus,textarea:focus{border-color:#b68d46;box-shadow:0 0 0 3px #e9d39d55}
+textarea{resize:vertical;line-height:1.6}
+.privacy{margin-top:20px;padding:14px;background:#f4efdf;border-radius:9px}
+.check{display:flex;align-items:flex-start;gap:10px;font-size:11px;line-height:1.6;font-weight:700}
+.check input{margin-top:2px;accent-color:#bd4650;flex:0 0 auto}
+.privacy p{font-size:10px;line-height:1.6;color:#667482;margin:9px 0 0 25px}
+button{width:100%;margin-top:22px;border:0;border-radius:30px;padding:16px;background:var(--red);color:white;font:700 14px Comfortaa,sans-serif;cursor:pointer;box-shadow:0 7px 16px #c94d5433}
+button:hover{background:#b63f47}button:disabled{opacity:.65;cursor:wait}
+.form-status{text-align:center;font-size:12px;line-height:1.6;min-height:18px;color:#285f47}
+.postmark{position:absolute;right:20px;top:18px;border:1px dashed #c7a96c;border-radius:50%;width:58px;height:58px;text-align:center;padding-top:7px;color:#b68d46;font-size:17px;transform:rotate(12deg)}
+.postmark small{font-size:6px;letter-spacing:1px}
+.trap{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important}
+footer{text-align:center;padding:25px;color:#c4d5e8;font-size:11px;border-top:1px solid #ffffff18}
+@media(max-width:700px){.top{height:65px}.top-note{display:none}main{padding:10px 17px 55px}.hero{grid-template-columns:1fr;gap:0;min-height:0}.hero-copy{text-align:center;padding:45px 5px 18px}.intro{margin:0 auto}.santa-art{height:270px;max-width:440px;width:100%;margin:5px auto 25px}.santa{font-size:120px}.letter-card{padding-top:42px}.postmark{width:48px;height:48px;right:12px;top:12px}.card-ribbon{padding-right:42px}}
