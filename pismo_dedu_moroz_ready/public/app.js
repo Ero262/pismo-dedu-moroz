@@ -1,6 +1,8 @@
 const form = document.getElementById("letterForm");
 const button = document.getElementById("sendButton");
 const statusBox = document.getElementById("status");
+const successCard = document.getElementById("successCard");
+const writeAgain = document.getElementById("writeAgain");
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -11,8 +13,6 @@ form.addEventListener("submit", async (event) => {
     name: document.getElementById("name").value,
     age: Number(document.getElementById("age").value),
     wish: document.getElementById("wish").value,
-    message: document.getElementById("message").value,
-    parentConsent: document.getElementById("parentConsent").checked,
     website: form.elements.website.value
   };
 
@@ -26,14 +26,23 @@ form.addEventListener("submit", async (event) => {
     });
     const result = await response.json();
     if (!response.ok) throw new Error(result.error || "Не удалось отправить письмо.");
-    form.reset();
-    statusBox.textContent = "Ура! Твоё письмо отправлено. Спасибо за новогоднее пожелание! 🎄";
-    statusBox.style.color = "#285f47";
+
+    form.hidden = true;
+    successCard.hidden = false;
+    successCard.scrollIntoView({ behavior: "smooth", block: "center" });
   } catch (error) {
     statusBox.textContent = error.message || "Ошибка соединения. Попробуй ещё раз позже.";
     statusBox.style.color = "#b63f47";
   } finally {
     button.disabled = false;
-    button.textContent = "Отправить письмо ✨";
+    button.innerHTML = 'Отправить письмо <span>✨</span>';
   }
+});
+
+writeAgain.addEventListener("click", () => {
+  form.reset();
+  form.hidden = false;
+  successCard.hidden = true;
+  statusBox.textContent = "";
+  form.scrollIntoView({ behavior: "smooth", block: "start" });
 });

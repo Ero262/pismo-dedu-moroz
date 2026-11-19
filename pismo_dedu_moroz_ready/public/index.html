@@ -3,48 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#102b4e">
+  <meta name="theme-color" content="#fff8ec">
   <meta name="description" content="Напиши письмо Деду Морозу и поделись новогодним желанием.">
-  <title>Письмо Деду Морозу 🎅</title>
+  <title>Письмо Деду Морозу — волшебная новогодняя почта</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="snow" aria-hidden="true">❄　　✦　　 ❄　　　 ✧　　❄　　✦</div>
-  <header class="top">
-    <div class="brand">🎄 Письмо Деду Морозу</div>
-    <span class="top-note">Северный полюс · Новогодняя почта</span>
+  <div class="snow-layer" aria-hidden="true">
+    <span>❄</span><span>✦</span><span>❅</span><span>❄</span><span>✧</span><span>❅</span><span>❄</span><span>✦</span><span>❅</span><span>❄</span><span>✧</span><span>❅</span><span>❄</span><span>✦</span><span>❅</span><span>❄</span><span>✧</span><span>❅</span>
+  </div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="На главную"><span class="brand-icon">🎄</span><span>Волшебная почта</span></a>
+    <span class="top-note">Северный полюс · Приём писем открыт</span>
+    <span class="top-stamp" aria-hidden="true">✉</span>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">ОТКРЫТА НОВОГОДНЯЯ ПОЧТА</p>
-        <h1>Напиши письмо<br><em>Деду Морозу!</em></h1>
-        <p class="intro">Расскажи о себе, загадай желание и отправь своё письмо в новогоднюю почту.</p>
-        <a class="scroll-link" href="#letter">✉ Написать письмо</a>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span>✦</span> СЕКРЕТНАЯ НОВОГОДНЯЯ МИССИЯ <span>✦</span></p>
+        <h1 id="hero-title">Твоё желание<br>уже ждёт <em>чуда!</em></h1>
+        <p class="intro">Устройся поудобнее, загадай самое заветное желание и отправь письмо прямо в резиденцию Деда Мороза.</p>
+        <a class="primary-link" href="#letter">Написать письмо <span>✉</span></a>
+        <div class="hero-note"><span>✨</span> Каждое доброе письмо особенное</div>
       </div>
-      <div class="santa-art" aria-label="Новогодняя иллюстрация" role="img">
-        <div class="moon"></div>
-        <div class="star s1">✦</div><div class="star s2">✧</div><div class="star s3">✦</div>
-        <div class="santa">🎅</div>
-        <div class="snowman">☃️</div>
-        <div class="tree t1">🎄</div><div class="tree t2">🎄</div>
-        <div class="gift g1">🎁</div><div class="gift g2">🎁</div>
-        <div class="ground"></div>
+      <div class="storybook reveal" role="img" aria-label="Сказочная зимняя иллюстрация: Дед Мороз, ёлки и подарки">
+        <div class="storybook-sun"></div><span class="art-star star-a">✦</span><span class="art-star star-b">✧</span><span class="art-star star-c">✦</span>
+        <div class="art-cloud cloud-a"></div><div class="art-cloud cloud-b"></div>
+        <div class="art-hill hill-back"></div><div class="art-hill hill-front"></div>
+        <span class="art-tree tree-a">🎄</span><span class="art-tree tree-b">🎄</span><span class="art-tree tree-c">🌲</span>
+        <span class="art-santa">🎅🏻</span><span class="art-snowman">☃️</span>
+        <span class="art-gift gift-a">🎁</span><span class="art-gift gift-b">🎁</span>
+        <div class="art-caption">Северный полюс<br><small>там, где живут чудеса</small></div>
       </div>
     </section>
 
     <section class="letter-section" id="letter">
-      <div class="section-heading">
-        <span class="mini-star">✧</span>
-        <h2>Твоё письмо</h2>
-        <p>Заполни открытку — и отправь её Деду Морозу!</p>
+      <div class="section-heading reveal">
+        <span class="heading-sparkle">✧ ✦ ✧</span>
+        <h2>Открытка для Дедушки Мороза</h2>
+        <p>Заполни несколько строчек — и отправь своё послание!</p>
       </div>
 
-      <form id="letterForm" class="letter-card">
-        <div class="card-ribbon">✦ СЕВЕРНАЯ ПОЧТА ✦</div>
+      <form id="letterForm" class="letter-card reveal">
+        <div class="card-topline"><span>ПОЧТА СЕВЕРНОГО ПОЛЮСА</span><span class="card-snowflake">❄</span></div>
+        <div class="letter-greeting">Дорогой Дедушка Мороз! <span>🎅</span></div>
+        <p class="card-hint">Расскажи немного о себе и поделись мечтой.</p>
+
         <label for="name">Как тебя зовут?</label>
-        <input id="name" name="name" maxlength="40" placeholder="Например, Маша" required autocomplete="off">
+        <input id="name" name="name" maxlength="40" placeholder="Например, Маша" required autocomplete="given-name">
 
         <label for="age">Сколько тебе лет?</label>
         <select id="age" name="age" required>
@@ -55,29 +64,31 @@
           <option>15</option><option>16</option><option>17</option>
         </select>
 
-        <label for="wish">Что ты хочешь получить на Новый год?</label>
-        <input id="wish" name="wish" maxlength="500" placeholder="Напиши своё новогоднее желание..." required>
-
-        <label for="message">Что ещё хочешь пожелать Деду Морозу?</label>
-        <textarea id="message" name="message" rows="5" maxlength="1500" placeholder="Например: желаю тебе весёлого Нового года!"></textarea>
+        <label for="wish">О чём ты мечтаешь?</label>
+        <input id="wish" name="wish" maxlength="500" placeholder="Моё самое заветное желание..." required>
 
         <div class="privacy">
-          <label class="check">
-            <input type="checkbox" id="parentConsent" required>
-            <span>Мой родитель или опекун разрешил отправить это письмо.</span>
-          </label>
-          <p>Не указывай фамилию, адрес, телефон, школу, фотографии или другие личные данные. Письмо получит организатор сайта по электронной почте. Отправляя письмо, ты подтверждаешь, что взрослый разрешил это сделать.</p>
+          <p>Не указывай фамилию, адрес, телефон, школу, фотографии или другие личные данные. Письмо получит организатор сайта по электронной почте. Отправляй его только с разрешения взрослого.</p>
         </div>
 
         <input class="trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button type="submit" id="sendButton">Отправить письмо ✨</button>
+        <button type="submit" id="sendButton">Отправить письмо <span>✨</span></button>
         <p class="form-status" id="status" role="status" aria-live="polite"></p>
-        <div class="postmark">❄<br><small>СЕВЕРНЫЙ<br>ПОЛЮС</small></div>
+        <div class="postmark" aria-hidden="true">СЕВЕРНЫЙ<br><b>❄</b><br>ПОЛЮС</div>
+        <div class="card-footer">С любовью и верой в чудеса <span>♥</span></div>
       </form>
+
+      <section class="success-card" id="successCard" hidden role="status" aria-live="polite">
+        <div class="success-illustration">💌</div>
+        <p class="success-kicker">ПОСЛАНИЕ ДОСТАВЛЕНО</p>
+        <h2>Ура! Письмо отправлено!</h2>
+        <p>Твоё послание уже отправилось на Северный полюс. Пусть самое доброе желание обязательно найдёт дорогу к чуду!</p>
+        <div class="success-sparkles">✨ ❄️ 🎄</div>
+        <button type="button" class="again-button" id="writeAgain">Написать ещё одно письмо</button>
+      </section>
     </section>
   </main>
-
-  <footer>С теплом и новогодним волшебством ✨</footer>
+  <footer><span>🎄</span> Пусть в каждом доме случится маленькое чудо <span>✨</span></footer>
   <script src="/app.js"></script>
 </body>
 </html>

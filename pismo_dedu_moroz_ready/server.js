@@ -46,13 +46,11 @@ app.post("/api/letter", limiter, async (req, res) => {
     const name = clean(req.body.name, 40);
     const age = Number(req.body.age);
     const wish = clean(req.body.wish, 500);
-    const message = clean(req.body.message, 1500);
-    const parentConsent = req.body.parentConsent === true;
 
     if (!name || !Number.isInteger(age) || age < 3 || age > 17 ||
-        !wish || !parentConsent) {
+        !wish) {
       return res.status(400).json({
-        error: "Проверьте имя, возраст, желание и подтверждение родителя."
+        error: "Проверьте имя, возраст и желание."
       });
     }
 
@@ -72,11 +70,6 @@ app.post("/api/letter", limiter, async (req, res) => {
       `Имя: ${name}`,
       `Возраст: ${age}`,
       `Желание: ${wish}`,
-      "",
-      "Пожелания:",
-      message || "Не указаны",
-      "",
-      "На сайте отмечено подтверждение разрешения родителя/опекуна."
     ].join("\n");
 
     const response = await fetch("https://api.resend.com/emails", {
